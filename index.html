@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #eafaf1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #2d6a4f;
+            font-weight: 600;
+            animation: fadeIn 2s ease-in-out;
+        }
+        #birthdayMessage {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #a5d6a7;
+            border-radius: 10px;
+            color: #444;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .audio-control {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        button {
+            background-color: #59c9aa;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #45a089;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>🎂 Happy Birthday Princy 🎉</h1>
+        <div id="birthdayMessage">
+            <p>🎉 "Happy Birthday to my brilliant friend! 🎂 May your day be as bright as your future 🌟 and as rewarding as solving that toughest question in physics! 🧠✨"</p>
+            <p>🎈 Have a fantastic day, Princy 🥳!</p>
+        </div>
+        <div class="br1">
+            <img src="Img/She.png" alt="Image not found">
+        </div>
+        <div class="audio-control">
+            <button id="playAudio">🎵 Play Happy Birthday Song</button>
+            <audio id="birthdaySong" src="Img/song.mp3" controls style="display: none;"></audio>
+        </div>
+    </div>
+
+    <script>
+        // Add manual play functionality
+        document.getElementById('playAudio').addEventListener('click', () => {
+            const birthdaySong = document.getElementById('birthdaySong');
+            birthdaySong.play();
+        });
+    </script>
+</body>
+</html>
